@@ -6,6 +6,22 @@
 
 A .NET Core API that provides information about cities in Brazil. The data is stored in a mongodb database.
 
+### Usage
+
+```
+{
+    CityName: "Rio *",
+    Population: ">= 20000",
+    Random: true,
+    RandomStatistic: true 
+    Capital: true,
+    State: "Mato Grosso -Sul",
+    StateAbbreviation: "ac",
+    MaxResultCount: 3,
+}
+```
+
+
 ### Author
 
 * **Igor Couto** - [igor.fcouto@gmail.com](mailto:igor.fcouto@gmail.com)
