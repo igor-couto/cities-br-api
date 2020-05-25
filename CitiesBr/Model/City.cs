@@ -1,10 +1,15 @@
-﻿using MongoDB.Bson;
+﻿using System.Text.Json.Serialization;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace CitiesBr.Model
 {
     public class City
     {
-        public ObjectId _id {get; set;}
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        [JsonIgnore]
+        public ObjectId Id {get; set;}
         public string Name { get; set; }
         public int Population { get; set; }
         public string State { get; set; }
