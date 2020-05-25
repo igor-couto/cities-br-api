@@ -5,6 +5,7 @@ using MongoDB.Bson;
 using CitiesBr.Model;
 using CitiesBr.Schema;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace CitiesBr.Services
 {
@@ -25,50 +26,80 @@ namespace CitiesBr.Services
             return _cityCollection.Find(new BsonDocument()).ToList();
         }
 
+        //TODO: refactor
         public List<City> GetCity(CityRequest request)
-            {
-            var city = _cityCollection.Find(x => true);
+        {
+            var builder = Builders<City>.Filter;
+            var filter = builder.Empty;
+            
 
             if(!string.IsNullOrEmpty(request.Name))
             {
-                city = _cityCollection.Find(x => x.Name == request.Name);
+                var regex  = new BsonRegularExpression(@"");
+                filter = builder.And(new [] {filter, builder.Eq("Name", request.Name)}); 
             }
 
             if(!string.IsNullOrEmpty(request.Population))
             {
+                if(request.Population[0] == '>')
+                {
+                    if(request.Population[1] == '=')
+                    {
+                        filter = builder.And(new [] {filter, builder.Gte("Population", Regex.Replace(request.Population, "[^.0-9]", ""))}); 
+                    }
+                    else
+                    {
+                        filter = builder.And(new [] {filter, builder.Gt("Population", Regex.Replace(request.Population, "[^.0-9]", ""))}); 
+                    }
+                }
 
+                if(request.Population[0] == '<')
+                {
+                    if(request.Population[1] == '=')
+                    {
+                        filter = builder.And(new [] {filter, builder.Lt("Population", Regex.Replace(request.Population, "[^.0-9]", ""))}); 
+                    }
+                    else
+                    {
+                        filter = builder.And(new [] {filter, builder.Lte("Population", Regex.Replace(request.Population, "[^.0-9]", ""))}); 
+                    }
+                }
             }
 
             if(request.IsCapital?? false)
             {
-                city = _cityCollection.Find(x => x.IsCapital == true);
+                filter = builder.And(new [] {filter, builder.Eq("IsCapital", true)}); 
             }
 
             if(!string.IsNullOrEmpty(request.State))
             {
-                city = _cityCollection.Find(x => x.State == request.State);
+                filter = builder.And(new [] {filter, builder.Eq("State", request.State)}); 
             }
+
+            IFindFluent<City, City> result;
 
             if(request.MaxResultCount != null)
             {
-                city.Limit(request.MaxResultCount.Value);
+                result = _cityCollection.Find(filter).Limit(request.MaxResultCount.Value);
+            }
+            else
+            {
+                result = _cityCollection.Find(filter);
             }
 
+            
             if(request.Random?? false)
             {
                 var random = new Random();  
                 var documentsCount = (int) _cityCollection.CountDocuments(x => true);
                 var elementAt = random.Next(0, documentsCount); 
 
-                var aaa = _cityCollection.AsQueryable().ElementAt(elementAt);
-            }
-            
-            if(request.RandomStatistic?? false)
-            {
-
+                var list = new List<City>(); 
+                list.Add(result.ToList().ElementAt(elementAt));
+                return list;
             }
 
-            return city.ToList();
+            return result.ToList();
         }
     }    
 }
