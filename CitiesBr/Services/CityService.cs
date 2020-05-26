@@ -64,6 +64,12 @@ namespace CitiesBr.Services
                         filter = builder.And(new [] {filter, builder.Lte("Population", Regex.Replace(request.Population, "[^.0-9]", ""))}); 
                     }
                 }
+
+                if(request.Population.Contains(".."))
+                {
+                    var numbers = request.Population.Split("..");
+                    filter = builder.And(new [] {filter, builder.Where(x => x.Population >= int.Parse(numbers[0]) && x.Population <= int.Parse(numbers[1]))}); 
+                }
             }
 
             if(request.IsCapital?? false)
