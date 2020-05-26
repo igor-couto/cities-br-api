@@ -13,6 +13,7 @@ namespace CitiesBr.Model
         public string Name { get; set; }
         public int Population { get; set; }
         public string State { get; set; }
-        public bool IsCapital { get; set; }
+        public bool? IsCapital { get; set; }
+        public bool? IsNationalCapital { get; set; }
     }
 }
