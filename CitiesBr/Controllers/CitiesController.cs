@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using CitiesBr.Schema;
 using CitiesBr.Model;
 using CitiesBr.Services;
+using System.Text.Json;
 
 namespace CitiesBr.Controllers
 {
@@ -23,7 +24,7 @@ namespace CitiesBr.Controllers
         [HttpGet]
         public IActionResult Get(CityRequest request)
         {
-            return Json(_cityService.GetCity(request));
+            return Json(_cityService.GetCity(request), new JsonSerializerOptions(){IgnoreNullValues = true});
         }
     }
 }
