@@ -3,10 +3,12 @@
 [![GitHub license](https://img.shields.io/github/license/igor-couto/cities-br-api.svg)](https://github.com/igor-couto/cities-br-api/blob/master/LICENSE)
 
 
-
 A .NET Core API that provides information about cities in Brazil. The data is stored in a mongodb database.
 
 ### Usage
+
+Currently, you can use the Cities/ endpoint to make GET requests.
+Exemple:
 
 ```
 {
