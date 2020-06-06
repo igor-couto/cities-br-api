@@ -15,5 +15,7 @@ namespace CitiesBr.Model
         public string State { get; set; }
         public bool? IsCapital { get; set; }
         public bool? IsNationalCapital { get; set; }
+        public int Area { get; set; }
+        public string[] Districts { get; set; }
     }
 }
