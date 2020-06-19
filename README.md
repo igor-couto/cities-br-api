@@ -7,21 +7,7 @@ A .NET Core API that provides information about cities in Brazil. The data is st
 
 ### Usage
 
-Currently, you can use the Cities/ endpoint to make GET requests.
-Exemple:
-
-```
-{
-    CityName: "Rio *",
-    Population: ">= 20000",
-    Random: true,
-    RandomStatistic: true 
-    Capital: true,
-    State: "Mato Grosso -Sul",
-    StateAbbreviation: "ac",
-    MaxResultCount: 3,
-}
-```
+Currently, you can use the cities/ endpoint to make GET requests with search string parameters.
 
 
 ### Author
