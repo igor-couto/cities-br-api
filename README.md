@@ -2,7 +2,7 @@
 
 # Cities Brazil API [![Build status](https://dev.azure.com/igor-couto/cities-br/_apis/build/status/cities-br-api%20-%20CI)](https://dev.azure.com/igor-couto/cities-br/_build/latest?definitionId=1) [![GitHub license](https://img.shields.io/github/license/igor-couto/cities-br-api.svg)](https://github.com/igor-couto/cities-br-api/blob/master/LICENSE)
 
-Public API that provides information about cities in Brazil.
+Public API that provides information about cities in Brazil. Work in Progress.
 
 ## About
 
