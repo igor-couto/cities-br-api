@@ -18,14 +18,14 @@ Currently, only two endpoints are available:
 ### Cities
 **GET** `https://URL/cities/`
 
-**GET** `https://URL/cities/`**[id]**
+**GET** `https://URL/city/`**[id]**
 
 **GET** `https://URL/cities?`**q=[QUERY STRING]&sort=[PARAMETER]&order=[ASC|DESC]**
 
 ### States
 **GET** `https://URL/states/`
 
-**GET** `https://URL/states/`**[id]**
+**GET** `https://URL/state/`**[id]**
 
 **GET** `https://URL/states?`**q=[QUERY STRING]&sort=[PARAMETER]&order=[ASC|DESC]**
 
