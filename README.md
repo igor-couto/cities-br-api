@@ -33,6 +33,5 @@ Currently, only two endpoints are available:
 ## Author
 
 * **Igor Couto** - [igor.fcouto@gmail.com](mailto:igor.fcouto@gmail.com)
-* Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 
 **Enjoy!**
