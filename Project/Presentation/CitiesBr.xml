@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CitiesBr</name>
+    </assembly>
+    <members>
+        <member name="M:CitiesBr.Controllers.CitiesController.GetAll">
+            <summary>
+            Get all the cities.
+            </summary>
+            <returns>Returns all cities</returns>
+        </member>
+        <member name="M:CitiesBr.Controllers.CitiesController.GetCityByName(System.String)">
+            <summary>
+            .
+            </summary>
+            <param name="name">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:CitiesBr.Controllers.CitiesController.GetCityById(System.Int32)">
+            <summary>
+            A.
+            </summary>
+            <param name="id">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:CitiesBr.Controllers.CitiesController.GetRandom">
+            <summary>
+            Get a city randomicaly
+            </summary>
+            <returns>.</returns>
+        </member>
+        <member name="M:CitiesBr.Controllers.DistricsController.Get">
+            <summary>
+            Get all the districts
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.DistricsController.Get(System.String)">
+            <summary>
+            Get a district by name
+            <param name="name"> Distric name</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.DistricsController.Get(System.Int32)">
+            <summary>
+            Get a district by id
+            <param name="id"> Distric id</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.MacroregionController.Get">
+            <summary>
+            Get all the macroregions
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.MacroregionController.Get(System.String)">
+            <summary>
+            Get a district by macroregion
+            <param name="name"> Macroregion name</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.MacroregionController.Get(System.Int32)">
+            <summary>
+            Get a macroregion by id
+            <param name="id"> Macroregion id</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.MicroregionController.Get">
+            <summary>
+            Get all the microregions
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.MicroregionController.Get(System.String)">
+            <summary>
+            Get a microregion by name
+            <param name="name"> Microregion name</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.MicroregionController.Get(System.Int32)">
+            <summary>
+            Get a microregion by id
+            <param name="id"> Microregion id</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.RegionController.Get">
+            <summary>
+            Get all regions
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.RegionController.Get(System.String)">
+            <summary>
+            Get a region by name
+            <param name="name"> Region name</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.RegionController.Get(System.Int32)">
+            <summary>
+            Get a region by id
+            <param name="id"> Region id</param>
+            </summary>
+        </member>
+        <member name="M:CitiesBr.Controllers.StateController.Get">
+            <summary>
+            Get all states
+            </summary>
+            <returns>All states of Brazil</returns>
+        </member>
+        <member name="M:CitiesBr.Controllers.StateController.Get(System.String)">
+            <summary>
+            Get a state by name
+            </summary>
+            <param name="name">State name</param>
+            <returns>Return the state</returns>
+        </member>
+        <member name="M:CitiesBr.Controllers.StateController.Get(System.Int32)">
+            <summary>
+            Get a state by id
+            </summary>
+            <param name="id">State id</param>
+            <returns>Return the state</returns>
+        </member>
+    </members>
+</doc>
