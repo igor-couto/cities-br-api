@@ -29,6 +29,18 @@ Currently, only two endpoints are available:
 
 **GET** `https://URL/states?`**q=[QUERY STRING]&sort=[PARAMETER]&order=[ASC|DESC]**
 
+### Result Exemple 
+```
+{
+   "_id":3136702,
+   "Name":"Juiz de Fora",
+   "Population":559636,
+   "State":"Minas Gerais",
+   "Microregion":"Juiz de Fora",
+   "Mesoregion":"Zona da Mata",
+   "Region":"Sudeste"
+}
+```
 
 ## Author
 
