@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Domain.Entities;
-using Domain.Interfaces;
+using CitiesBR.Domain.Entities;
+using CitiesBR.Domain.Interfaces;
 
-namespace Infrastructure.Repository
+namespace CitiesBR.Infrastructure.Persistence.Repository
 {
     public class CityRepository : ICityRepository
     {

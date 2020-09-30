@@ -1,45 +1,45 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Presentation.Controllers
+namespace CitiesBR.API.Controllers
 {
     [ApiController]
-    public class MacroregionController : Controller
+    public class MicroregionController : Controller
     {
-        private readonly ILogger<MacroregionController> _logger;
+        private readonly ILogger<MicroregionController> _logger;
 
-        public MacroregionController(ILogger<MacroregionController> logger)
+        public MicroregionController(ILogger<MicroregionController> logger)
         {
             _logger = logger;
         }
 
         /// <summary>
-        /// Get all the macroregions
+        /// Get all the microregions
         /// </summary>
         [HttpGet()]
-        [Route("macroregions")]
+        [Route("microregions")]
         public IActionResult Get()
         {
             return NotFound();
         }
 
         /// <summary>
-        /// Get a district by macroregion
-        /// <param name="name"> Macroregion name</param>
+        /// Get a microregion by name
+        /// <param name="name"> Microregion name</param>
         /// </summary>
         [HttpGet()]
-        [Route("macroregion/{name}")]
+        [Route("microregion/{name}")]
         public IActionResult Get(string name)
         {
             return NotFound();
         }
 
         /// <summary>
-        /// Get a macroregion by id
-        /// <param name="id"> Macroregion id</param>
+        /// Get a microregion by id
+        /// <param name="id"> Microregion id</param>
         /// </summary>
         [HttpGet()]
-        [Route("macroregion/{id}")]
+        [Route("microregion/{id}")]
         public IActionResult Get(int id)
         {
             return NotFound();

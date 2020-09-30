@@ -1,4 +1,7 @@
-public class MongoDbContext
+namespace CitiesBR.Infrastructure.Persistence.Database
 {
+    public class MongoDbContext
+    {
 
+    }
 }

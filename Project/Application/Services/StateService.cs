@@ -3,8 +3,8 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Linq;
 using System;
-using Application.Interfaces;
-using Domain.Entities;
+using CitiesBR.Application.Interfaces;
+using CitiesBR.Domain.Entities;
 
 namespace Application.Services
 {
@@ -39,6 +39,11 @@ namespace Application.Services
             var elementAt = random.Next(0, documentsCount); 
 
             return _stateCollection.AsQueryable().ElementAt(elementAt);
+        }
+
+        object IStateService.GetRandom()
+        {
+            throw new NotImplementedException();
         }
     }    
 }

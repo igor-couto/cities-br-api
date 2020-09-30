@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Domain.Interfaces
+namespace CitiesBR.Domain.Interfaces
 {
     public interface IRepository<IEntity>
     {

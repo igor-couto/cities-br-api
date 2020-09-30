@@ -1,4 +1,4 @@
-namespace Application.Interfaces
+namespace CitiesBR.Application.Interfaces
 {
     public interface IRegionService 
     {

@@ -1,4 +1,4 @@
-namespace Presentation.Schema 
+namespace CitiesBR.API.Schema 
 {
     public class SearchRequest
     {

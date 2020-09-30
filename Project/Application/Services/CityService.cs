@@ -3,11 +3,13 @@ using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using MongoDB.Bson;
 using System.Linq;
-using Application.Interfaces;
-using Domain.Entities;
+using CitiesBR.Application.Interfaces;
+using CitiesBR.Domain.Entities;
+using CitiesBR.Domain.Interfaces;
 
-namespace Application.Services
+namespace CitiesBR.Application.Services
 {
+    
     public class CityService : ICityService
     {
         private IMongoCollection<City> _cityCollection;
@@ -18,6 +20,11 @@ namespace Application.Services
             var _database = client.GetDatabase("citiesbr");
 
             _cityCollection = _database.GetCollection<City>("cities");
+        }
+
+        public IEntity GetRandon()
+        {
+            throw new System.NotImplementedException();
         }
 
         internal IEnumerable<City> GetAll()
@@ -31,5 +38,20 @@ namespace Application.Services
 
         internal City GetRandom()
             => _cityCollection.AsQueryable().Sample(1).FirstOrDefault();
+
+        IEntity ICityService.GetAll()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        IEntity ICityService.GetCityById(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        IEntity ICityService.GetCityByName(string name)
+        {
+            throw new System.NotImplementedException();
+        }
     }    
 }

@@ -1,19 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Application.Services;
+using CitiesBR.Application.Interfaces;
 
-namespace Presentation.Controllers
+namespace CitiesBR.API.Controllers
 {
     [ApiController]
     public class StateController : Controller
     {
         private readonly ILogger<StateController> _logger;
-        private readonly StateService _stateService;
+        private readonly IStateService _stateService;
 
-        public StateController(ILogger<StateController> logger)
+        public StateController(ILogger<StateController> logger, IStateService stateService)
         {
             _logger = logger;
-            _stateService = new StateService();
+            _stateService = stateService;
         }
 
          /// <summary>

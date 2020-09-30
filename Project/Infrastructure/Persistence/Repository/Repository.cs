@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Domain.Interfaces;
+using CitiesBR.Infrastructure.Persistence.Database;
+using CitiesBR.Domain.Interfaces;
 
-namespace Infrastructure.Repository
+namespace CitiesBR.Infrastructure.Presistence.Repository
 {
     public class BaseRepository<IEntity> : IRepository<IEntity>
     {

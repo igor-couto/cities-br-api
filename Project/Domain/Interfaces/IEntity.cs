@@ -1,4 +1,4 @@
-namespace Domain.Interfaces
+namespace CitiesBR.Domain.Interfaces
 {
     public interface IEntity
     {

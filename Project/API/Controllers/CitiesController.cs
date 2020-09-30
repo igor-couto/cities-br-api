@@ -1,20 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CitiesBR.Application.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Application.Services;
 using System.Text.Json;
 
-namespace Presentation.Controllers
+namespace CitiesBR.API.Controllers
 {
     [ApiController]
     public class CitiesController : Controller
     {
         private readonly ILogger<CitiesController> _logger;
-        private readonly CityService _cityService;
+        private readonly ICityService _cityService;
 
-        public CitiesController(ILogger<CitiesController> logger)
+        public CitiesController(ILogger<CitiesController> logger, ICityService cityService)
         {
             _logger = logger;
-            _cityService = new CityService();
+            _cityService = cityService;
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Presentation.Controllers
         [Route("city/ramdon")]
         public IActionResult GetRandom()
         {
-            return Json(_cityService.GetRandom(), new JsonSerializerOptions(){ IgnoreNullValues = true });
+            return Json(_cityService.GetRandon(), new JsonSerializerOptions(){ IgnoreNullValues = true });
         }
 
     }

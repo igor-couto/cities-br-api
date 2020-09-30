@@ -1,8 +1,8 @@
 using System.Text.Json.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
-using Domain.Interfaces;
+using CitiesBR.Domain.Interfaces;
 
-namespace Domain.Entities
+namespace CitiesBR.Domain.Entities
 {
     public class Mesoregion : IEntity
     {

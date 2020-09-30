@@ -1,3 +1,5 @@
+namespace CitiesBR.Infrastructure.Persistence.Database
+{
     public class MongoDbConfig
     {
         public string Database { get; set; }
@@ -16,3 +18,4 @@
             }
         }
     }
+}

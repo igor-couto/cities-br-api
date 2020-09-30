@@ -1,46 +1,45 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Application.Services;
 
-namespace Presentation.Controllers
+namespace CitiesBR.API.Controllers
 {
     [ApiController]
-    public class DistricsController : Controller
+    public class RegionController : Controller
     {
-        private readonly ILogger<CitiesController> _logger;
+        private readonly ILogger<RegionController> _logger;
 
-        public DistricsController(ILogger<CitiesController> logger)
+        public RegionController(ILogger<RegionController> logger)
         {
             _logger = logger;
         }
 
         /// <summary>
-        /// Get all the districts
+        /// Get all regions
         /// </summary>
         [HttpGet()]
-        [Route("districs")]
+        [Route("regions")]
         public IActionResult Get()
         {
             return NotFound();
         }
 
         /// <summary>
-        /// Get a district by name
-        /// <param name="name"> Distric name</param>
+        /// Get a region by name
+        /// <param name="name"> Region name</param>
         /// </summary>
         [HttpGet()]
-        [Route("district/{name}")]
+        [Route("region/{name}")]
         public IActionResult Get(string name)
         {
             return NotFound();
         }
 
         /// <summary>
-        /// Get a district by id
-        /// <param name="id"> Distric id</param>
+        /// Get a region by id
+        /// <param name="id"> Region id</param>
         /// </summary>
         [HttpGet()]
-        [Route("district/{id}")]
+        [Route("region/{id}")]
         public IActionResult Get(int id)
         {
             return NotFound();

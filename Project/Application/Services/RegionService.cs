@@ -3,10 +3,10 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Linq;
 using System;
-using Application.Interfaces;
-using Domain.Entities;
+using CitiesBR.Application.Interfaces;
+using CitiesBR.Domain.Entities;
 
-namespace Application.Services
+namespace CitiesBR.Application.Services
 {
     public class RegionService : IRegionService
     {

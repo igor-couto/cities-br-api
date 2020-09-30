@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Domain.Entities;
+using CitiesBR.Domain.Entities;
 
-namespace Domain.Interfaces
+namespace CitiesBR.Domain.Interfaces
 {
     public interface ICityRepository : IRepository<City>
     {

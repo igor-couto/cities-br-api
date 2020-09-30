@@ -1,16 +1,15 @@
 using System;
 using System.IO;
 using System.Reflection;
-using Infrastructure.CrossCut;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
 using Microsoft.OpenApi.Models;
+using CitiesBR.Infrastructure.CrossCut;
 
-namespace Presentation
+namespace CitiesBR.API
 {
     public class Startup
     {
@@ -101,5 +100,4 @@ namespace Presentation
             DependencyInjector.RegisterServices(services, configuration);
         }
     }
-    
 }
