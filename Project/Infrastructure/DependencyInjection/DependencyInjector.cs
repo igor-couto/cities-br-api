@@ -7,7 +7,7 @@ using CitiesBR.Infrastructure.Presistence.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CitiesBR.Infrastructure.CrossCut
+namespace CitiesBR.Infrastructure.DependencyInjection
 {
     public static class DependencyInjector
     {

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using CitiesBR.Infrastructure.CrossCut;
+using CitiesBR.Infrastructure.DependencyInjection;
 
 namespace CitiesBR.API
 {

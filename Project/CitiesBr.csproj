@@ -5,15 +5,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>$(MSBuildThisFileDirectory)\bin\$(Configuration)\$(TargetFramework)\CitiesBr.xml</DocumentationFile>
+    <!-- <DocumentationFile>$(MSBuildThisFileDirectory)\bin\$(Configuration)\$(TargetFramework)\CitiesBr.xml</DocumentationFile> -->
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Infrastructure\GeoInfo.Infrastructure.csproj"/>
-    <ProjectReference Include="..\Domain\GeoInfo.Domain.csproj"/>
-    <ProjectReference Include="..\Application\GeoInfo.Application.csproj"/>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="2.10.4" />
@@ -22,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="CitiesBr.xml">
+    <None Update="API/CitiesBr.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
