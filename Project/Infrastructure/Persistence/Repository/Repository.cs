@@ -14,12 +14,12 @@ namespace CitiesBR.Infrastructure.Presistence.Repository
 
         public IEnumerable<IEntity> Find(Expression<Func<IEntity, bool>> predicate)
         {
-            return null;
+            throw new NotImplementedException();
         }
 
         public IEnumerable<IEntity> GetAll()
         {
-            return null;
+            throw new NotImplementedException();
         }
 
         public IEntity Get(int id)
